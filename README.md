@@ -1,5 +1,4 @@
 # Openhaus_QA
-Manual and Unit Testing Showcase
 
 
 # Manual and Unit Testing Portfolio  
