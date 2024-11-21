@@ -21,9 +21,9 @@ In my previous role, I worked on a project involving robust testing methodologie
 - Tested multiple endpoints for functionality, error handling, and performance.  
 - Verified response codes, response bodies, and headers.  
 - Below is an example of an API testing process:  
-Request: GET /api/v1/allprojectsv2
-Response:
-
+Request: GET ```/api/v1/allprojectsv2```
+**Response:**
+```json
 {
     "status": 1,
     "message": "Successful",
@@ -39,8 +39,8 @@ Response:
         ]
     }
 }
-
-Explanation:
+```
+**Explanation:**
 
 Purpose: This API fetches project details.
 Sample Data:
@@ -56,6 +56,7 @@ apartment_type_info: Available apartment types.
 - Ensured code reliability by asserting expected outputs and responses.  
 - Sample test case:  
  unit test written in PHPUnit
+```php
 public function test_allprojectsv2() {
     $response = $this->getJson('/api/v1/allprojectsv2');
     $response->assertStatus(200)
@@ -63,9 +64,10 @@ public function test_allprojectsv2() {
              ->assertJsonPath('message', 'Successful')
              ->assertJsonPath('data.projects.project_code', 'prescon-mahim-01');
 }
-Explanation:
+```
+**Explanation:**
 
-Purpose: This test checks the /api/v1/allprojectsv2 endpoint.
+Purpose: This test checks the ```/api/v1/allprojectsv2``` endpoint.
 Assertions:
 The status code of the response is 200.
 The status in the JSON response is 1.
@@ -83,7 +85,7 @@ Here’s a description of a manual test case for validating the same API:
 
 Test Case Name: Verify Project API Response
 Steps:
-Send a GET request to /api/v1/allprojectsv2.
+Send a GET request to ```/api/v1/allprojectsv2```.
 Verify the response status code is 200.
 Validate that the status field in the response is 1.
 Check that the project_code is "prescon-mahim-01".
