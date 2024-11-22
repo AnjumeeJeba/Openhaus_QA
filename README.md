@@ -4,6 +4,7 @@
 # Manual and Unit Testing Portfolio  
 This repository highlights my work in manual testing, unit testing, and API validation using tools like PHPUnit and Postman. These examples demonstrate my ability to test APIs, validate responses, and ensure software quality.
 
+https://drive.google.com/drive/folders/1dDhxkPEb-utyxtEJ8xvgTJHsFZ20Xbmu?usp=sharing 
 
 ## Project Overview  
 
@@ -42,9 +43,13 @@ Request: GET ```/api/v1/allprojectsv2```
 **Explanation:**
 
 Purpose: This API fetches project details.
+
 Sample Data:
+
 project_code: Unique identifier for the project.
+
 building_info: Details about the buildings in the project.
+
 apartment_type_info: Available apartment types.
  
 
@@ -67,12 +72,15 @@ public function test_allprojectsv2() {
 **Explanation:**
 
 Purpose: This test checks the ```/api/v1/allprojectsv2``` endpoint.
+
 Assertions:
-The status code of the response is 200.
-The status in the JSON response is 1.
-The message is "Successful".
-The project_code in the returned data matches the expected value (prescon-mahim-01).
-![Screenshot]([https://your-public-link-to-image](https://drive.google.com/file/d/1zYCLYrWYgOztYl3SOAfiZVR6P7HllDkJ/view?usp=sharing))
+
+- The status code of the response is 200.
+- The status in the JSON response is 1.
+- The message is "Successful".
+- The project_code in the returned data matches the expected value (prescon-mahim-01).
+
+
 
 ---
 
@@ -83,11 +91,14 @@ The project_code in the returned data matches the expected value (prescon-mahim-
 Here’s a description of a manual test case for validating the same API:
 
 Test Case Name: Verify Project API Response
+
 Steps:
-Send a GET request to ```/api/v1/allprojectsv2```.
-Verify the response status code is 200.
-Validate that the status field in the response is 1.
-Check that the project_code is "prescon-mahim-01".
+
+-Send a GET request to ```/api/v1/allprojectsv2```.
+-Verify the response status code is 200.
+-Validate that the status field in the response is 1.
+-Check that the project_code is "prescon-mahim-01".
+
 Expected Result:
 Response matches the structure and values as shown in the example response. 
 
